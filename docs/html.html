@@ -1,0 +1,134 @@
+<!DOCTYPE html> <!-- versão html  -->
+<html lang="en"> <!-- linguagem da página  -->
+<head>
+    <meta charset="UTF-8">  <!-- codificação do texto na página (UTF-8, permite certos caracteres como ç, ~ etc.) -->
+    <!-- 
+        A tag <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        é usada para controlar o layout em dispositivos móveis. 
+        Quando você inclui essa tag em uma página HTML, está instruindo o navegador a definir a largura da área visível (viewport) 
+        igual à largura do dispositivo em que a página está sendo exibida. 
+        Isso ajuda a garantir que o conteúdo seja dimensionado corretamente para diferentes tamanhos de tela, 
+        especialmente em dispositivos móveis. 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertext Markup Language</title> <!-- título da página -->
+    <!-- <link rel="stylesheet" href="style.css"> referência para o arquivo css -->
+</head>
+<body>
+
+    <!-- títulos por hierarquia -->
+    <h1> HTML: HyperText Markup Language </h1>
+    <h1>Titulo</h1>
+    <h2>Subtitulo</h2>
+    <h3>Sub Subtitulo</h3>
+
+    <!-- listas -->
+    <!-- Ordenada -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- Não ordenada (pontos ao invés de numerada) -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- links -->
+    <a href="https://www.google.com">Google</a>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- video, imagens e audio -->
+    <img src="images/html5-semantico.webp" width="500px" height="500px" alt="icon">
+    <!-- <video src="movie.mp4" controls> -->
+    <!-- <audio src="song.mp3" controls> -->
+
+    <!-- tabelas -->
+    <!-- tr : linha, td : coluna, th : cabeçalho -->
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+    </table>
+
+    <!-- números, checkbox, radio, botões -->
+
+    <label for="number">Number</label>
+    <input type="number" name="number" id="number" value="5">
+    
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox">Checkbox</label>
+    <input type="checkbox" name="checkbox" id="checkbox2">
+    <label for="checkbox2">Checkbox 2</label>
+
+    <input type="radio" name="radio" id="radio">
+    <label for="radio">Radio</label>
+    <input type="radio" name="radio" id="radio2">
+    <label for="radio2">Radio 2</label>
+
+    <button>Button</button>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+    <!-- formulários -->
+
+    <!-- html semântico -->
+    <!-- São convenções de nomes para div's (contêiner genérico) que representação 
+    partes especificas da página. Tem a mesma funcionalidade de código -->
+
+    <!-- header, nav, section, article, aside, footer -->
+
+    <br>
+
+    <p>hr Desenha uma linha</p>
+    <hr> </hr>
+    <main> 
+        <p><b>main</b> <i>Indica o conteúdo principal do documento.</i> </p>
+        <h1> Main body </h1>
+        <header> 
+            <p><b>header</b> Representa o cabeçalho de um documento ou seção.</p>
+            <nav> 
+                <p><b>nav</b> Destinado a blocos de navegação, como menus ou tabelas de conteúdo.</p> 
+            </nav>
+        </header>
+
+        <article> 
+            <p> <b>Article</b> Usado para conteúdo independente, como um artigo de blog ou um widget.</p>
+            <section> 
+                <p> <b>section</b> Define uma seção dentro de um documento, que geralmente contém um título. </p>
+            </section>
+        </article>
+
+        <aside> 
+            <p><b>Aside</b> Para conteúdo relacionado mas separado do conteúdo principal, como barras laterais. </aside></p>
+        <footer> 
+            <p><b>footer</b> O rodapé de um documento ou seção.</p>
+        </footer>
+    </main>
+    <hr> </hr>
+
+    <canvas id="meuCanvas">
+        Essa mensagem aparece se seu navegador não suporta a tag &lt;canvas&gt;. <!-- &lt : < , &gt; : > -->
+    </canvas>
+
+      <!-- script: permite escrever JavaScript diretamente no código html -->
+      <script>
+        // desenha na tela
+        let canvas = document.getElementById("meuCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, 80, 80);
+      </script>
+      
+</body>
+</html>
